@@ -1,0 +1,6 @@
+owslib
+lxml
+pandas
+pyarrow
+defusedxml
+requests
