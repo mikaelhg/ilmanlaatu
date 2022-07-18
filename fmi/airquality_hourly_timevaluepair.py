@@ -5,7 +5,11 @@ import pandas as pd
 from defusedxml import ElementTree as ET
 import requests
 
-from fmi.utils import FMI_WFS_SERVICE
+from fmi.utils import FMI_WFS_SERVICE, _FMI_NS
+
+
+_XLINK_HREF = '{http://www.w3.org/1999/xlink}href'
+_GML_ID = '{http://www.opengis.net/gml/3.2}id'
 
 
 def _fetch_airquality_hourly_timevaluepair() -> str:
@@ -24,28 +28,28 @@ def _parse_airquality_hourly_timevaluepair(xml_text: str) -> List[List]:
     res = []
     doc: Element = ET.fromstring(xml_text)
 
-    for m in doc.iter('{http://www.opengis.net/wfs/2.0}member'):
+    for m in doc.iterfind('wfs:member', _FMI_NS):
 
-        pt = m.find('.//{http://www.opengis.net/om/2.0}phenomenonTime')
-        pt_link = pt.get('{http://www.w3.org/1999/xlink}href')
+        pt = m.find('.//om:phenomenonTime', _FMI_NS)
+        pt_link = pt.get(_XLINK_HREF)
         if pt_link:
             pt_begin, pt_end = None, None
         else:
-            pt_tp = pt.find('.//{http://www.opengis.net/gml/3.2}TimePeriod')
-            pt_link = pt_tp.get('{http://www.opengis.net/gml/3.2}id')
-            pt_begin = pt_tp.find('.//{http://www.opengis.net/gml/3.2}beginPosition').text
-            pt_end = pt_tp.find('.//{http://www.opengis.net/gml/3.2}endPosition').text
+            pt_tp = pt.find('.//gml:TimePeriod', _FMI_NS)
+            pt_link = pt_tp.get(_GML_ID)
+            pt_begin = pt_tp.find('.//gml:beginPosition', _FMI_NS).text
+            pt_end = pt_tp.find('.//gml:endPosition', _FMI_NS).text
 
-        rt = m.find('.//{http://www.opengis.net/om/2.0}resultTime')
-        rt_link = rt.get('{http://www.w3.org/1999/xlink}href')
+        rt = m.find('.//om:resultTime', _FMI_NS)
+        rt_link = rt.get(_XLINK_HREF)
         if rt_link:
             rt_time_position = None
         else:
-            rt_ti = rt.find('.//{http://www.opengis.net/gml/3.2}TimeInstant')
-            rt_link = rt_ti.get('{http://www.opengis.net/gml/3.2}id')
-            rt_time_position = rt_ti.find('.//{http://www.opengis.net/gml/3.2}timePosition').text
+            rt_ti = rt.find('.//gml:TimeInstant', _FMI_NS)
+            rt_link = rt_ti.get(_GML_ID)
+            rt_time_position = rt_ti.find('.//gml:timePosition', _FMI_NS).text
 
-        foi = m.find('.//{http://www.opengis.net/om/2.0}featureOfInterest')
+        foi = m.find('.//om:featureOfInterest', _FMI_NS)
 
         print(pt_link, pt_begin, pt_end)
         print(rt_link, rt_time_position)

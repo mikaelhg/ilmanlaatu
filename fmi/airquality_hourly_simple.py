@@ -5,7 +5,7 @@ import pandas as pd
 from defusedxml import ElementTree as ET
 import requests
 
-from fmi.utils import FMI_WFS_SERVICE, get_node_text
+from fmi.utils import FMI_WFS_SERVICE, _FMI_NS
 
 
 def _fetch_airquality_hourly_simple() -> str:
@@ -23,11 +23,11 @@ def _fetch_airquality_hourly_simple() -> str:
 def _parse_airquality_hourly_simple(xml_text: str) -> List[List]:
     doc: Element = ET.fromstring(xml_text)
     res = []
-    for m in doc.iter("{http://www.opengis.net/wfs/2.0}member"):
-        pos = m.find(".//{http://www.opengis.net/gml/3.2}pos").text
-        time = m.find(".//{http://xml.fmi.fi/schema/wfs/2.0}Time").text
-        name = m.find(".//{http://xml.fmi.fi/schema/wfs/2.0}ParameterName").text
-        value = m.find(".//{http://xml.fmi.fi/schema/wfs/2.0}ParameterValue").text
+    for m in doc.iterfind("wfs:member", _FMI_NS):
+        pos = m.find(".//gml:pos", _FMI_NS).text
+        time = m.find(".//BsWfs:Time", _FMI_NS).text
+        name = m.find(".//BsWfs:ParameterName", _FMI_NS).text
+        value = m.find(".//BsWfs:ParameterValue", _FMI_NS).text
         res.append([pos, time, name, value])
     return res
 
