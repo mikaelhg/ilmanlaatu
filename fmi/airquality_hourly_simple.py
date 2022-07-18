@@ -1,7 +1,8 @@
 from typing import List
+from xml.etree.ElementTree import Element
 
 import pandas as pd
-from defusedxml import minidom
+from defusedxml import ElementTree as ET
 import requests
 
 from fmi.utils import FMI_WFS_SERVICE, get_node_text
@@ -20,13 +21,13 @@ def _fetch_airquality_hourly_simple() -> str:
 
 
 def _parse_airquality_hourly_simple(xml_text: str) -> List[List]:
-    doc = minidom.parseString(xml_text)
+    doc: Element = ET.fromstring(xml_text)
     res = []
-    for m in doc.getElementsByTagName("wfs:member"):
-        pos = get_node_text(m.getElementsByTagName("gml:pos")[0])
-        time = get_node_text(m.getElementsByTagName("BsWfs:Time")[0])
-        name = get_node_text(m.getElementsByTagName("BsWfs:ParameterName")[0])
-        value = get_node_text(m.getElementsByTagName("BsWfs:ParameterValue")[0])
+    for m in doc.iter("{http://www.opengis.net/wfs/2.0}member"):
+        pos = m.find(".//{http://www.opengis.net/gml/3.2}pos").text
+        time = m.find(".//{http://xml.fmi.fi/schema/wfs/2.0}Time").text
+        name = m.find(".//{http://xml.fmi.fi/schema/wfs/2.0}ParameterName").text
+        value = m.find(".//{http://xml.fmi.fi/schema/wfs/2.0}ParameterValue").text
         res.append([pos, time, name, value])
     return res
 

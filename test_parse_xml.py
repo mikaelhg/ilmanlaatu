@@ -13,12 +13,12 @@ def wfs():
 
 
 def main():
-    # with airquality_hourly_simple() as df:
-    #     df.to_parquet('simple.parquet')
-    #     print(df)
-    #     print(df.dtypes)
-    with airquality_hourly_timevaluepair() as df:
-        pass
+    df = airquality_hourly_simple()
+    df.to_parquet('simple.parquet')
+    print(df)
+    print(df.dtypes)
+
+    df = airquality_hourly_timevaluepair()
 
 
 if __name__ == '__main__':
