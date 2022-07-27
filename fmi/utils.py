@@ -1,5 +1,5 @@
 
-FMI_WFS_SERVICE = 'https://opendata.fmi.fi/wfs'
+_FMI_WFS_SERVICE = 'https://opendata.fmi.fi/wfs'
 
 _FMI_NS = {
     'wfs': 'http://www.opengis.net/wfs/2.0',

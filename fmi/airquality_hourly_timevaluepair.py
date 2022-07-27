@@ -5,7 +5,7 @@ import pandas as pd
 from defusedxml import ElementTree as ET
 import requests
 
-from fmi.utils import FMI_WFS_SERVICE, _FMI_NS
+from fmi.utils import _FMI_WFS_SERVICE, _FMI_NS
 
 
 _XLINK_HREF = '{http://www.w3.org/1999/xlink}href'
@@ -19,7 +19,7 @@ def _fetch_airquality_hourly_timevaluepair() -> str:
         'request': 'getFeature',
         'storedquery_id': 'fmi::observations::airquality::hourly::timevaluepair'
     }
-    response = requests.get(FMI_WFS_SERVICE, params=params)
+    response = requests.get(_FMI_WFS_SERVICE, params=params)
     response.raise_for_status()
     return response.text
 

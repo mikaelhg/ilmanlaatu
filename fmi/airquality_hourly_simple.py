@@ -5,7 +5,7 @@ import pandas as pd
 from defusedxml import ElementTree as ET
 import requests
 
-from fmi.utils import FMI_WFS_SERVICE, _FMI_NS
+from fmi.utils import _FMI_WFS_SERVICE, _FMI_NS
 
 
 def _fetch_airquality_hourly_simple() -> str:
@@ -15,7 +15,7 @@ def _fetch_airquality_hourly_simple() -> str:
         'request': 'getFeature',
         'storedquery_id': 'fmi::observations::airquality::hourly::simple'
     }
-    response = requests.get(FMI_WFS_SERVICE, params=params)
+    response = requests.get(_FMI_WFS_SERVICE, params=params)
     response.raise_for_status()
     return response.text
 
@@ -32,13 +32,17 @@ def _parse_airquality_hourly_simple(xml_text: str) -> List[List]:
     return res
 
 
-def airquality_hourly_simple() -> pd.DataFrame:
-    xml_text = _fetch_airquality_hourly_simple()
-    data = _parse_airquality_hourly_simple(xml_text)
-
-    df = pd.DataFrame(data, columns=['pos', 'time', 'name', 'value'], dtype=str)
+def _pandify_airquality_hourly_simple(data: List[List]) -> pd.DataFrame:
+    columns = ['pos', 'time', 'name', 'value']
+    df = pd.DataFrame(data, columns=columns, dtype=str)
     df['pos'] = df['pos'].astype('category')
     df['time'] = pd.to_datetime(df['time'])
     df['name'] = df['name'].astype('category')
     df['value'] = pd.to_numeric(df['value'], errors='coerce')
     return df
+
+
+def airquality_hourly_simple() -> pd.DataFrame:
+    xml_text = _fetch_airquality_hourly_simple()
+    data = _parse_airquality_hourly_simple(xml_text)
+    return _pandify_airquality_hourly_simple(data)
