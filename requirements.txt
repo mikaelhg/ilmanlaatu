@@ -1,6 +1,8 @@
-owslib
-lxml
+numpy
+Cython
+dask
 pandas
 pyarrow
-defusedxml
 requests
+fmiopendata
+kats

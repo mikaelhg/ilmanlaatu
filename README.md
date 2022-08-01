@@ -4,14 +4,21 @@ https://en.ilmatieteenlaitos.fi/open-data-manual
 
 ## Describe stored queries
 
+https://www.ilmatieteenlaitos.fi/tallennetut-kyselyt
+
 http://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=describeStoredQueries&
 
 urban::observations::airquality::hourly::multipointcoverage   
 urban::observations::airquality::hourly::simple   
+urban::observations::airquality::hourly::timevaluepair
+
 fmi::observations::airquality::hourly::multipointcoverage   
-fmi::observations::airquality::hourly::simple
+fmi::observations::airquality::hourly::simple   
+fmi::observations::airquality::hourly::timevaluepair
 
 https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::observations::airquality::hourly::simple
+
+https://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=urban::observations::airquality::hourly::simple
 
 ## Kaupunkien ja teollisuuden ilmanlaatuhavainnot
 
