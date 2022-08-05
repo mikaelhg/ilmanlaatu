@@ -2,6 +2,9 @@ numpy
 Cython
 dask
 pandas
+xarray
+h5netcdf
+zarr
 pyarrow
 requests
 fmiopendata
