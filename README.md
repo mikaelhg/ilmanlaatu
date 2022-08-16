@@ -1,5 +1,7 @@
 # Ilmanlaatu
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mikaelhg/ilmanlaatu/HEAD?labpath=import.ipynb)
+
 https://en.ilmatieteenlaitos.fi/open-data-manual
 
 https://github.com/fmidev/smartmet-plugin-wfs/blob/master/cnf/opendata_stored_queries_github/urban::observations::airquality::hourly::multipointcoverage.conf
