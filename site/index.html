@@ -14,22 +14,26 @@
     <body>
         <script type="module">
             import * as d3 from "https://cdn.skypack.dev/d3";
-
-            const locale = await d3.json("https://cdn.jsdelivr.net/npm/d3-format@3/locale/fi-FI.json");
-            d3.formatDefaultLocale(locale);
-
             import * as Plot from "https://cdn.skypack.dev/@observablehq/plot";
+
+            d3.json("https://cdn.jsdelivr.net/npm/d3-format@3/locale/fi-FI.json").then(locale => {
+                d3.formatDefaultLocale(locale);
+            });
+
+            d3.json("https://cdn.jsdelivr.net/npm/d3-time-format@4/locale/fi-FI.json").then(locale => {
+                d3.timeFormatDefaultLocale(locale);
+            });
 
             let fields = [
                 'time',
                 'fmisid',
                 'PM10_PT1H_avg',
-            //    'PM25_PT1H_avg', 
-            //    'O3_PT1H_avg',
-            //    'CO_PT1H_avg',
-            //    'SO2_PT1H_avg', 
-            //    'NO2_PT1H_avg',
-            //    'TRSC_PT1H_avg',
+                'PM25_PT1H_avg', 
+                'O3_PT1H_avg',
+                'CO_PT1H_avg',
+                'SO2_PT1H_avg', 
+                'NO2_PT1H_avg',
+                'TRSC_PT1H_avg',
             ];
 
             // 'starttime': start_time,
@@ -55,7 +59,7 @@
 
             let data = (await d3.json(url)).map(d => {
                 return {
-                    id: d.fmisid,
+                    fmisid: d.fmisid,
                     pm10: d.PM10_PT1H_avg,
                     time: parseTime(d.time),
                 };
@@ -64,22 +68,22 @@
             let graph = Plot.line(data, {
                 x: 'time',
                 y: 'pm10',
-                stroke: 'id',
+                stroke: 'fmisid',
             });
 
             document.body.append(graph.plot({
                 width: window.innerWidth,
                 height: window.innerHeight,
                 locale: 'fi',
-                xasd: {
+                xxs: {
                     tickFormat: (d) => {
-                        console.log(d);
-                        return Plot.formatIsoDate(d);
-                    }
-                    // ticks: 'time',
-                    // transform: (d) => d3.utcFormat(d),
-                    // extent: d3.extent(data, d => d.time),
-                }
+                        if (d.getHours() == 0) {
+                            return d.getDate();
+                        } else {
+                            return d.getHours();
+                        }
+                    },
+                },
             }));
         </script>
     </body>
