@@ -1,6 +1,6 @@
 # Ilmanlaatu
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mikaelhg/ilmanlaatu/HEAD?labpath=import.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mikaelhg/ilmanlaatu/HEAD?labpath=timeseries.ipynb)
 
 ## Using the new and nice FMI time series interface
 
