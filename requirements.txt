@@ -1,12 +1,13 @@
+requests
+pandas
+pyarrow
+geopandas
 numpy
 Cython
 dask
-pandas
 xarray
+xarray_spatial
 h5netcdf
 zarr
-pyarrow
-requests
-fmiopendata
 kats
 pendulum
