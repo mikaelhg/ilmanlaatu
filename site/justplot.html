@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ilmanlaatu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="module">
+            import * as d3 from "https://cdn.skypack.dev/d3";
+            import * as Plot from "https://cdn.skypack.dev/@observablehq/plot";
+
+            d3.json("https://cdn.jsdelivr.net/npm/d3-format@3/locale/fi-FI.json").then(locale => {
+                d3.formatDefaultLocale(locale);
+            });
+
+            d3.json("https://cdn.jsdelivr.net/npm/d3-time-format@4/locale/fi-FI.json").then(locale => {
+                d3.timeFormatDefaultLocale(locale);
+            });
+
+            let fields = [
+                'time',
+                'fmisid',
+                'PM10_PT1H_avg',
+                'PM25_PT1H_avg', 
+                'O3_PT1H_avg',
+                'CO_PT1H_avg',
+                'SO2_PT1H_avg', 
+                'NO2_PT1H_avg',
+                'TRSC_PT1H_avg',
+            ];
+
+            // 'starttime': start_time,
+            // 'endtime': end_time,
+
+            let params = new Map([
+                ['format', 'json'],
+                ['groupareas', '0'],
+                ['precision', 'double'],
+                ['producer', 'airquality_urban'],
+                ['area', 'Helsinki'],
+                ['param', fields.join(',')],
+                ['tz', 'UTC'],
+            ]);
+
+            let url = new URL('https://opendata.fmi.fi/timeseries');
+
+            for (const [key, value] of params) {
+                url.searchParams.append(key, value);
+            }
+
+            let parseTime = d3.timeParse('%Y%m%dT%H%M%S');
+
+            let data = (await d3.json(url)).map(d => {
+                return {
+                    fmisid: d.fmisid,
+                    pm10: d.PM10_PT1H_avg,
+                    time: parseTime(d.time),
+                };
+            });
+
+            let graph = Plot.line(data, {
+                x: 'time',
+                y: 'pm10',
+                stroke: 'fmisid',
+            });
+
+            document.body.append(graph.plot({
+                width: window.innerWidth,
+                height: window.innerHeight,
+                locale: 'fi',
+                xxs: {
+                    tickFormat: (d) => {
+                        if (d.getHours() == 0) {
+                            return d.getDate();
+                        } else {
+                            return d.getHours();
+                        }
+                    },
+                },
+            }));
+        </script>
+    </body>
+</html>
