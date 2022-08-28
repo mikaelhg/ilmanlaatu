@@ -1,13 +1,14 @@
+# obvious
 requests
+
+# required
+numpy
+duckdb
 pandas
 pyarrow
-geopandas
-numpy
-Cython
-dask
-xarray
-xarray_spatial
-h5netcdf
-zarr
-kats
+# kats
+
+# nice
 pendulum
+dtale
+rich
