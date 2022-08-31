@@ -14,15 +14,26 @@
     <body>
         <script type="module">
             import * as d3 from "https://cdn.skypack.dev/d3";
+
+            d3.formatDefaultLocale({
+              "decimal": ",",
+              "thousands": "\u00a0",
+              "grouping": [3],
+              "currency": ["", "\u00a0€"]
+            });
+
+            d3.timeFormatDefaultLocale({
+              "dateTime": "%A, %-d. %Bta %Y klo %X",
+              "date": "%-d.%-m.%Y",
+              "time": "%H:%M:%S",
+              "periods": ["a.m.", "p.m."],
+              "days": ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"],
+              "shortDays": ["Su", "Ma", "Ti", "Ke", "To", "Pe", "La"],
+              "months": ["tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu", "heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu"],
+              "shortMonths": ["Tammi", "Helmi", "Maalis", "Huhti", "Touko", "Kesä", "Heinä", "Elo", "Syys", "Loka", "Marras", "Joulu"]
+            });
+
             import * as Plot from "https://cdn.skypack.dev/@observablehq/plot";
-
-            d3.json("https://cdn.jsdelivr.net/npm/d3-format@3/locale/fi-FI.json").then(locale => {
-                d3.formatDefaultLocale(locale);
-            });
-
-            d3.json("https://cdn.jsdelivr.net/npm/d3-time-format@4/locale/fi-FI.json").then(locale => {
-                d3.timeFormatDefaultLocale(locale);
-            });
 
             let fields = [
                 'time',

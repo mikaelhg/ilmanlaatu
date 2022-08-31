@@ -109,34 +109,34 @@
             // Released under the ISC license.
             // https://observablehq.com/@d3/multi-line-chart
             function LineChart(data, {
-            x = ([x]) => x, // given d in data, returns the (temporal) x-value
-            y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
-            z = () => 1, // given d in data, returns the (categorical) z-value
-            title, // given d in data, returns the title text
-            defined, // for gaps in data
-            curve = d3.curveLinear, // method of interpolation between points
-            marginTop = 20, // top margin, in pixels
-            marginRight = 5, // right margin, in pixels
-            marginBottom = 30, // bottom margin, in pixels
-            marginLeft = 25, // left margin, in pixels
-            width = 300, // outer width, in pixels
-            height = 300, // outer height, in pixels
-            xType = d3.scaleUtc, // type of x-scale
-            xDomain, // [xmin, xmax]
-            xRange = [marginLeft, width - marginRight], // [left, right]
-            yType = d3.scaleLinear, // type of y-scale
-            yDomain, // [ymin, ymax]
-            yRange = [height - marginBottom, marginTop], // [bottom, top]
-            yFormat, // a format specifier string for the y-axis
-            yLabel, // a label for the y-axis
-            zDomain, // array of z-values
-            color = "currentColor", // stroke color of line, as a constant or a function of *z*
-            strokeLinecap, // stroke line cap of line
-            strokeLinejoin, // stroke line join of line
-            strokeWidth = 1.5, // stroke width of line
-            strokeOpacity, // stroke opacity of line
-            mixBlendMode = "multiply", // blend mode of lines
-            voronoi // show a Voronoi overlay? (for debugging)
+                x = ([x]) => x, // given d in data, returns the (temporal) x-value
+                y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
+                z = () => 1, // given d in data, returns the (categorical) z-value
+                title, // given d in data, returns the title text
+                defined, // for gaps in data
+                curve = d3.curveLinear, // method of interpolation between points
+                marginTop = 20, // top margin, in pixels
+                marginRight = 5, // right margin, in pixels
+                marginBottom = 30, // bottom margin, in pixels
+                marginLeft = 25, // left margin, in pixels
+                width = 1000, // outer width, in pixels
+                height = 450, // outer height, in pixels
+                xType = d3.scaleUtc, // type of x-scale
+                xDomain, // [xmin, xmax]
+                xRange = [marginLeft, width - marginRight], // [left, right]
+                yType = d3.scaleLinear, // type of y-scale
+                yDomain, // [ymin, ymax]
+                yRange = [height - marginBottom, marginTop], // [bottom, top]
+                yFormat, // a format specifier string for the y-axis
+                yLabel, // a label for the y-axis
+                zDomain, // array of z-values
+                color = "currentColor", // stroke color of line, as a constant or a function of *z*
+                strokeLinecap, // stroke line cap of line
+                strokeLinejoin, // stroke line join of line
+                strokeWidth = 1.5, // stroke width of line
+                strokeOpacity, // stroke opacity of line
+                mixBlendMode = "multiply", // blend mode of lines
+                voronoi // show a Voronoi overlay? (for debugging)
             } = {}) {
             // Compute values.
             const X = d3.map(data, x);
@@ -174,11 +174,11 @@
             const svg = d3.select("div#container")
                 .append("svg")
                 .attr("preserveAspectRatio", "xMinYMin meet")
-                .attr("viewBox", "0 0 300 300")
+                //.attr("viewBox", "0 0 300 150")
                 .classed("svg-content", true)
-                // .attr("width", width)
-                // .attr("height", height)
-                // .attr("viewBox", [0, 0, width, height])
+                .attr("width", width)
+                .attr("height", height)
+                .attr("viewBox", [0, 0, width, height])
                 .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
                 .style("-webkit-tap-highlight-color", "transparent")
                 .on("pointerenter", pointerentered)
