@@ -1,17 +1,21 @@
 #!/usr/bin/env python
 
 from typing import List
+from time import sleep
+import os.path
+
 import requests
 import pendulum
-from pendulum import DateTime
 import pandas as pd
 import numpy as np
-import duckdb
+from rich.console import Console
+from rich.progress import track
 
 
 _AQ_FIELDS = {
     'fmisid': np.int32,
-    'time': np.datetime64,
+    'time': 'datetime64[ns]',
+#    'time': np.datetime64,
     'AQINDEX_PT1H_avg': np.float64,
     'PM10_PT1H_avg': np.float64,
     'PM25_PT1H_avg': np.float64,
@@ -21,7 +25,10 @@ _AQ_FIELDS = {
     'NO2_PT1H_avg': np.float64,
     'TRSC_PT1H_avg': np.float64,
 }
+
 _TIMESERIES_URL = 'https://opendata.fmi.fi/timeseries'
+
+_SLEEP_BETWEEN_QUERIES = 10.0
 
 
 def fetch(
@@ -36,29 +43,38 @@ def fetch(
         'groupareas': '0',
         'producer': 'airquality_urban',
         'param': ','.join(fields),
-        'area': 'Uusimaa',
+        'area': 'Finland',
         'starttime': start_time.isoformat(timespec="seconds"),
         'endtime': end_time.isoformat(timespec="seconds"),
         'tz': 'UTC',  # Output TZ
         **other_params,
     }
-    return requests.get(_TIMESERIES_URL, params=params).json()
+    result = requests.get(_TIMESERIES_URL, params=params)
+    result.raise_for_status()
+    return result.json()
 
 
-def to_df(data: List[dict]) -> pd.DataFrame:
-    return pd.DataFrame(data).astype(_AQ_FIELDS)
-
-
-def open_db():
-    pass
+def to_df(data: List[dict], types: dict = _AQ_FIELDS) -> pd.DataFrame:
+    return pd.DataFrame(data).astype(types)
 
 
 def main():
-    start_time = pendulum.yesterday('UTC')
-    end_time = pendulum.tomorrow('UTC')
-    data = fetch(start_time, end_time)
-    df = to_df(data)
-    print(df)
+    console = Console()
+    st = pendulum.today('UTC')
+
+    while True:
+        st = st.subtract(days=1)
+        et = st.add(hours=23, minutes=59)
+        file_name = f'''./data/airquality_{st.date().isoformat()}.parquet'''
+        if not os.path.exists(file_name):
+            console.log(f"getting {file_name}")
+            data = fetch(st, et)
+            if not data or len(data) == 0:
+                break
+            df = to_df(data)
+            df.to_parquet(file_name, compression='gzip')
+            for step in track(range(20), description='Sleeping...'):
+                sleep(_SLEEP_BETWEEN_QUERIES / 20)
 
 
 if __name__ == '__main__':
