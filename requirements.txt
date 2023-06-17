@@ -3,12 +3,12 @@ requests
 
 # required
 numpy
-duckdb
 pandas
 pyarrow
 # kats
 
 # nice
 pendulum
+arrow
 dtale
 rich

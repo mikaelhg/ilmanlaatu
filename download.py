@@ -7,28 +7,25 @@ import os.path
 import requests
 import pendulum
 import pandas as pd
-import numpy as np
 from rich.console import Console
-from rich.progress import track
 
 
 _AQ_FIELDS = {
-    'fmisid': np.int32,
-    'time': 'datetime64[ns]',
-#    'time': np.datetime64,
-    'AQINDEX_PT1H_avg': np.float64,
-    'PM10_PT1H_avg': np.float64,
-    'PM25_PT1H_avg': np.float64,
-    'O3_PT1H_avg': np.float64,
-    'CO_PT1H_avg': np.float64,
-    'SO2_PT1H_avg': np.float64,
-    'NO2_PT1H_avg': np.float64,
-    'TRSC_PT1H_avg': np.float64,
+    'fmisid': 'int32[pyarrow]',
+    'time': 'datetime64[ns, UTC]',
+    'AQINDEX_PT1H_avg': 'float64[pyarrow]',
+    'PM10_PT1H_avg': 'float64[pyarrow]',
+    'PM25_PT1H_avg': 'float64[pyarrow]',
+    'O3_PT1H_avg': 'float64[pyarrow]',
+    'CO_PT1H_avg': 'float64[pyarrow]',
+    'SO2_PT1H_avg': 'float64[pyarrow]',
+    'NO2_PT1H_avg': 'float64[pyarrow]',
+    'TRSC_PT1H_avg': 'float64[pyarrow]',
 }
 
 _TIMESERIES_URL = 'https://opendata.fmi.fi/timeseries'
 
-_SLEEP_BETWEEN_QUERIES = 10.0
+_SLEEP_BETWEEN_QUERIES = 3.0
 
 
 def fetch(
@@ -67,14 +64,13 @@ def main():
         et = st.add(hours=23, minutes=59)
         file_name = f'''./data/airquality_{st.date().isoformat()}.parquet'''
         if not os.path.exists(file_name):
-            console.log(f"getting {file_name}")
+            console.print(f"getting {file_name}")
             data = fetch(st, et)
             if not data or len(data) == 0:
                 break
             df = to_df(data)
             df.to_parquet(file_name, compression='gzip')
-            for step in track(range(20), description='Sleeping...'):
-                sleep(_SLEEP_BETWEEN_QUERIES / 20)
+            sleep(_SLEEP_BETWEEN_QUERIES)
 
 
 if __name__ == '__main__':
