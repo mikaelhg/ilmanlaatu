@@ -5,7 +5,7 @@ requests
 numpy
 pandas
 pyarrow
-# kats
+defusedxml
 
 # nice
 pendulum

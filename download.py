@@ -12,7 +12,7 @@ from rich.console import Console
 
 _AQ_FIELDS = {
     'fmisid': 'int32[pyarrow]',
-    'time': 'datetime64[ns, UTC]',
+    'utctime': 'datetime64[ns, UTC]',
     'AQINDEX_PT1H_avg': 'float64[pyarrow]',
     'PM10_PT1H_avg': 'float64[pyarrow]',
     'PM25_PT1H_avg': 'float64[pyarrow]',
@@ -31,16 +31,17 @@ _SLEEP_BETWEEN_QUERIES = 3.0
 def fetch(
     start_time: pendulum.DateTime = pendulum.yesterday('UTC'),
     end_time: pendulum.DateTime = pendulum.tomorrow('UTC'),
-    fields: List[str] = _AQ_FIELDS.keys(),
+    fields: List[str] = list(_AQ_FIELDS.keys()),
     other_params: dict = dict(),
 ) -> List[dict]:
     params = {
         'format': 'json',
+        'timeformat': 'xml',
         'precision': 'double',
         'groupareas': '0',
         'producer': 'airquality_urban',
         'param': ','.join(fields),
-        'area': 'Finland',
+        'bbox': '20.6455928891,59.846373196,31.5160921567,70.1641930203',
         'starttime': start_time.isoformat(timespec="seconds"),
         'endtime': end_time.isoformat(timespec="seconds"),
         'tz': 'UTC',  # Output TZ
