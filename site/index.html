@@ -1,97 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Ilmanlaatu Helsingissä</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <style>
-        html,
-        body {
-            margin: 0px;
-            padding: 0px;
-        }
-        #vis {
-            height: 98dvh;
-            width: 98dvw;
-        }
-    </style>
+    <link rel="stylesheet" href="./app.css" />
     <meta http-equiv="refresh" content="3600" />
 </head>
-
 <body>
     <div id="vis"></div>
-    <script type="text/javascript">
-        // https://github.com/d3/d3-time-format/blob/main/locale/fi-FI.json
-        var yourVlSpec = {
-            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "description": "PM10 air quality in Helsinki.",
-            "config": {
-                "locale": {
-                    "time": {
-                        "dateTime": "%A, %-d. %Bta %Y klo %X",
-                        "date": "%-d.%-m.%Y",
-                        "time": "%H:%M:%S",
-                        "periods": ["", ""],
-                        "days": ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"],
-                        "shortDays": ["Su", "Ma", "Ti", "Ke", "To", "Pe", "La"],
-                        "months": ["tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu", "heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu"],
-                        "shortMonths": ["Tammi", "Helmi", "Maalis", "Huhti", "Touko", "Kesä", "Heinä", "Elo", "Syys", "Loka", "Marras", "Joulu"]
-                    }
-                }
-            },
-            "data": {
-                "url": "https://opendata.fmi.fi/timeseries?format=csv&precision=double&tz=UTC&groupareas=0&producer=airquality_urban&bbox=22.65,59.61,26.65,60.84&param=fmisid,time,PM10_PT1H_avg&starttime=-3d&endtime=-0",
-                "format": {
-                    "type": "csv",
-                    "parse": { "time": "utc:'%Y%m%dT%H%M%S'" }
-                }
-            },
-            "width": "container",
-            "height": "container",
-            "autosize": {
-                "type": "fit",
-                "contains": "padding"
-            },
-            "mark": {
-                "type": "line",
-                "point": false
-            },
-            "encoding": {
-                "x": {
-                    "field": "time",
-                    "type": "temporal",
-                    "title": null,
-                    "axis": {
-                        "formatType": "time",
-                        "format": {
-                          "year": "%Y",
-                          "quarter": "%B",
-                          "month": "%B",
-                          "week": "%b %d",
-                          "date": "%a %d",
-                          "hours": "%H",
-                          "minutes": "%I:%M",
-                          "seconds": ":%S",
-                          "milliseconds": ".%L"
-                        }
-                    }
-                },
-                "y": {
-                    "field": "PM10_PT1H_avg",
-                    "type": "quantitative",
-                    "title": "PM10"
-                },
-                "color": {
-                    "field": "fmisid",
-                    "type": "nominal",
-                    "legend": null
-                }
-            }
-        };
-        vegaEmbed('#vis', yourVlSpec, {actions: false});
-    </script>
+    <script src="./app.js"></script>
 </body>
-
 </html>

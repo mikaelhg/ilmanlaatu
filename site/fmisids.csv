@@ -1,0 +1,326 @@
+"fmisid","region","iso2","name","latitude","longitude"
+104328,"Suomi","FI","Äänekoski",62.6077805,25.7232304
+103151,"Äänekoski","FI","Äänekoski Hiski",62.6016998,25.7361507
+107168,"Äänekoski","FI","Äänekoski Paloasema",62.6022911,25.7398491
+104364,"Äänekoski","FI","Äänekoski Rotkola",62.5851212,25.7783108
+104069,"Espoo","FI","Espoo Kattilalaakso",60.1662788,24.6543903
+104025,"Espoo","FI","Espoo Kauklahti",60.1886482,24.5935402
+104028,"Espoo","FI","Espoo Kivenlahti",60.1558418,24.6396599
+103995,"Espoo","FI","Espoo Laaksolahti",60.2439194,24.7474709
+106949,"Espoo","FI","Espoo Länsiväylä Friisilä",60.1613007,24.7120495
+104290,"Espoo","FI","Espoo Leppävaara 1",60.2217903,24.8112202
+104335,"Espoo","FI","Espoo Leppävaara 2",60.2206993,24.8151703
+104030,"Espoo","FI","Espoo Leppävaara 3",60.2163200,24.8168392
+100691,"Espoo","FI","Espoo Leppävaara Läkkisepänkuja",60.2202415,24.8113308
+104032,"Espoo","FI","Espoo Lintuvaara",60.2391205,24.8134594
+100723,"Espoo","FI","Espoo Luukki",60.3143883,24.6848602
+103998,"Espoo","FI","Espoo Mankkaa",60.2032013,24.7609100
+104340,"Espoo","FI","Espoo Matinkylä",60.1643295,24.7518196
+104020,"Espoo","FI","Espoo Matinkylä 2",60.1588287,24.7434101
+104008,"Espoo","FI","Espoo Niittykumpu",60.1690292,24.7641697
+104062,"Espoo","FI","Espoo Niittymaa",60.1690216,24.7817097
+104047,"Espoo","FI","Espoon keskus",60.2057686,24.6577206
+107148,"Espoo","FI","Espoo Otaniemi Kehä I",60.1803398,24.8222408
+104037,"Espoo","FI","Espoo Pohjois-Tapiola",60.1860695,24.8086205
+107399,"Espoo","FI","Espoo Pohjois-Tapiola 2",60.1828918,24.7934494
+104241,"Espoo","FI","Espoo Tapiola",60.1778908,24.7973499
+104367,"Espoo","FI","Espoo Tapiola 2",60.1703186,24.8038406
+103989,"Espoo","FI","Espoo Tapiola 3",60.1787415,24.8229599
+104052,"Espoo","FI","Espoo Tuomarila",60.2035294,24.6987095
+104015,"Hämeenlinna","FI","Hämeenlinna Cygnaeuksenkadun puisto",60.9951096,24.4448795
+104022,"Hämeenlinna","FI","Hämeenlinna Kaivokatu",60.9960594,24.4559708
+103109,"Hämeenlinna","FI","Hämeenlinna Niittykatu",60.9993401,24.4553795
+104329,"Hämeenlinna","FI","Hämeenlinna Raatihuoneenkatu",60.9948502,24.4583206
+104261,"Hämeenlinna","FI","Hämeenlinna Viipurintie",60.9993286,24.4774399
+107030,"Hamina","FI","Hamina Meltti/siirrettävä",60.5739517,27.1912193
+104041,"Hamina","FI","Hamina Raatihuoneentori/siirrettävä",60.5694389,27.1967793
+104071,"Hamina","FI","Hamina Rautatienkatu/siirrettävä",60.5739212,27.1907692
+106415,"Hamina","FI","Hamina Satama ratapiha",60.5411301,27.1621799
+104317,"Hanko","FI","Hanko Metsäkaivot",59.8839912,23.2176609
+104318,"Hanko","FI","Hanko Syndalen",59.8717003,23.2308407
+103142,"Harjavalta","FI","Harjavalta Kaleva",61.3149490,22.1367092
+103143,"Harjavalta","FI","Harjavalta Pirkkala",61.3316917,22.1432991
+104221,"Harjavalta","FI","Harjavalta Torttilan koulu 2",61.3293114,22.1161308
+778660,"Heinola","FI","Keskusta",61.2031288,26.0331898
+100614,"Heinola","FI","Pelastuslaitos",61.1950989,26.0202694
+105416,"Heinola","FI","Heinola Tiilitehtaankatu",61.2004890,26.0469398
+107392,"Heinola","FI","Tommola",61.2000999,26.0492706
+107393,"Heinola","FI","Heinola Vierumäki",61.1075592,25.9300709
+104061,"Helsinki","FI","Helsinki Eteläranta",60.1647491,24.9533195
+105406,"Helsinki","FI","Helsinki Eteläsatama",60.1622086,24.9568596
+104031,"Helsinki","FI","Helsinki Hämeentie",60.1817017,24.9552898
+104007,"Helsinki","FI","Helsinki Jakomäki",60.2609482,25.0737705
+100662,"Helsinki","FI","Helsinki Kallio 2",60.1873894,24.9505997
+103997,"Helsinki","FI","Helsinki Kamppi",60.1649399,24.9256706
+104010,"Helsinki","FI","Helsinki Katajanokka",60.1652718,24.9692497
+104053,"Helsinki","FI","Helsinki Katajanokka 2",60.1652184,24.9738102
+104351,"Helsinki","FI","Helsinki Kontula",60.2351799,25.0864601
+104079,"Helsinki","FI","Helsinki Länsisatama 3",60.1534805,24.9186306
+106948,"Helsinki","FI","Helsinki Länsisatama 4",60.1552086,24.9217796
+100762,"Helsinki","FI","Helsinki Mäkelänkatu",60.1964417,24.9519806
+104065,"Helsinki","FI","Helsinki Mäkelänkatu 52",60.1967201,24.9511909
+104019,"Helsinki","FI","Helsinki Malmi",60.2536087,25.0036297
+104068,"Helsinki","FI","Helsinki Malmi 2",60.2418518,25.0254593
+100742,"Helsinki","FI","Mannerheimintie",60.1696396,24.9392395
+104240,"Helsinki","FI","Helsinki Pakila",60.2453003,24.9363899
+107165,"Helsinki","FI","Helsinki Paloheinä",60.2500381,24.9394207
+106950,"Helsinki","FI","Helsinki Pirkkola",60.2342186,24.9223194
+104237,"Helsinki","FI","Helsinki Punavuori",60.1619682,24.9399605
+104339,"Helsinki","FI","Helsinki Rautatieasema",60.1706696,24.9416504
+103994,"Helsinki","FI","Helsinki Runeberginkatu",60.1776505,24.9227104
+103977,"Helsinki","FI","Helsinki Sörnäinen",60.1876984,24.9704399
+104074,"Helsinki","FI","Helsinki Tapanila",60.2637787,25.0240593
+104239,"Helsinki","FI","Helsinki Töölö",60.1853905,24.9164791
+104105,"Helsinki","FI","Helsinki Töölöntulli",60.1903381,24.9157314
+104046,"Helsinki","FI","Helsinki Unioninkatu",60.1661987,24.9515305
+100803,"Helsinki","FI","Helsinki Vartiokylä Huivipolku",60.2239304,25.1024399
+103814,"Hollola","FI","Hollola Kansankatu siirrettävä",60.9874611,25.5168705
+107623,"Hollola","FI","Hollola Kuntotie",60.9794807,25.5336094
+104096,"Hollola","FI","Hollola Muovitie",60.9966812,25.5347691
+104059,"Hyvinkää","FI","Hyvinkää 2",60.6301994,24.8679695
+107166,"Hyvinkää","FI","Hyvinkää Kruununpuisto",60.6192284,24.8578606
+103118,"Imatra","FI","Imatra Mansikkala",61.1889191,28.7701206
+104298,"Imatra","FI","Imatra Pelkola",61.1271515,28.8361206
+103119,"Imatra","FI","Imatra Pelkolan tulliasema Raja",61.1283798,28.8377609
+103121,"Imatra","FI","Imatra Rautionkylä",61.2380714,28.8736897
+104269,"Imatra","FI","Imatra Sairaala",61.2215881,28.8209095
+103122,"Imatra","FI","Imatra Teppanala",61.1530418,28.8101406
+103150,"Inkoo","FI","Inkoo Heimgård",60.0444794,23.9814796
+103129,"Jämsä","FI","Jämsä Seppolantie",61.8652000,25.1973495
+104026,"Jämsä","FI","Jämsä Yläaste",61.9243889,25.1642303
+104038,"Suomi","FI","Järvenpää",60.4671402,25.0861797
+107400,"Järvenpää","FI","Järvenpää Helsingintie",60.4697189,25.0873508
+103154,"Järvenpää","FI","Järvenpää Helsingintie",60.4713211,25.0896702
+103148,"Joensuu","FI","Joensuu Koskikatu 1",62.5990906,29.7633991
+106796,"Jyväskylä","FI","Jyväskylä Hannikaisenkatu",62.2381706,25.7478809
+107401,"Jyväskylä","FI","Jyväskylä Jyskä",62.2415009,25.8414993
+104135,"Jyväskylä","FI","Jyväskylä Kortepohja",62.2490196,25.7045708
+104267,"Jyväskylä","FI","Jyväskylä Kuokkala",62.2259598,25.7738209
+104131,"Jyväskylä","FI","Jyväskylä Lyseo",62.2433701,25.7438698
+103127,"Jyväskylä","FI","Jyväskylä Lyseo 2",62.2430496,25.7432098
+104146,"Jyväskylä","FI","Jyväskylä Palokka",62.2886009,25.7439098
+103128,"Jyväskylä","FI","Jyväskylä Palokka 2",62.2899094,25.7111397
+104338,"Jyväskylä","FI","Jyväskylä Säynätsalo 2",62.1396294,25.7657108
+104145,"Jyväskylä","FI","Jyväskylä Vaajakoski",62.2491188,25.8693905
+104337,"Jyväskylä","FI","Jyväskylä Vaajakoski 2",62.2488289,25.8669109
+100823,"Kaarina","FI","Kaarina Kaarina",60.4083099,22.3783493
+103993,"Kaarina","FI","Kaarinan keskusta",60.4068718,22.3713608
+778656,"Kajaani","FI","Kajaani Keskusta",64.2244415,27.7333298
+104126,"Kajaani","FI","Kajaanin keskusta",64.2239990,27.7331505
+104016,"Kajaani","FI","Kajaanin keskusta 2",64.2242889,27.7333908
+104127,"Kajaani","FI","Kajaani Pöllyvaara",64.2351379,27.7281609
+104243,"Suomi","FI","Kauniainen",60.2159882,24.7107697
+104012,"Kauniainen","FI","Kauniainen 2",60.2097816,24.7319298
+104075,"Kauniainen","FI","Kauniainen 4",60.2128906,24.7112598
+105405,"Kauniainen","FI","Kauniainen Kauniaistentie",60.2095718,24.7299404
+107284,"Kemi","FI","Biotuotetehdas",65.7586517,24.5398598
+107218,"Kemi","FI","Keskusta",65.7335434,24.5621490
+104292,"Suomi","FI","Keminmaa",65.8019104,24.5424099
+104258,"Kemi","FI","Kemi Paattio",65.7687073,24.5460701
+104356,"Kemi","FI","Kemi Paloasema",65.7425537,24.5891399
+104257,"Kemi","FI","Kemi Takajärvi",65.7307281,24.6276608
+106953,"Kirkkonummi","FI","Kirkkonummi keskusta",60.1302185,24.4263191
+104320,"Kokkola","FI","Kokkola Halkokari 2",63.8561783,23.1262093
+103107,"Kokkola","FI","Kokkola keskusta Pitkänsillankatu",63.8376389,23.1315994
+104256,"Kokkola","FI","Kokkola Tehtaankatu, Rosso",63.8361282,23.1322403
+103108,"Kokkola","FI","Kokkola Ykspihlaja",63.8415718,23.0421906
+104155,"Kotka","FI","Kotka Hakalanmäki",60.5051804,26.9552402
+103105,"Kotka","FI","Kotka Kirjastotalo",60.4654999,26.9389305
+104082,"Kotka","FI","Kotka/Kirkkokatu/siirrettävä",60.4682083,26.9459591
+107167,"Kotka","FI","Kotka Metsäkulma",60.5021896,26.9707298
+107164,"Kotka","FI","Kotka Mussalo satama/siirrettävä",60.4283905,26.9172001
+103106,"Kotka","FI","Kotka Rauhala",60.5131607,26.9462109
+107285,"Kotka","FI","Kotka Ruukinkatu",60.4680214,26.9514599
+107622,"Kotka","FI","Kotka Tiutinen",60.4690399,26.9826107
+104278,"Kouvola","FI","Kouvola Inkeroinen",60.7008018,26.8174591
+105409,"Kouvola","FI","Kouvola Inkeroinen tehtaanmäen koulu",60.7065315,26.8276291
+104078,"Kouvola","FI","Kouvola Kankaan Koulu",60.8704491,26.7010994
+103111,"Kouvola","FI","Kouvola Käsityöläisenkatu",60.8692589,26.7056007
+103112,"Kouvola","FI","Kouvola Kuusankoski Urheilukentäntie",60.9071999,26.6343899
+104166,"Kouvola","FI","Kouvola Lappakosken koulu",60.9256210,26.6753101
+104277,"Kouvola","FI","Kouvola Myllykoski, Paperitehtaantie 5",60.7662697,26.7877293
+104321,"Kouvola","FI","Kouvola Myllykoski, Pappilantie 7",60.7688713,26.7839508
+103978,"Kouvola","FI","Kouvola Ravikylä",60.8858795,26.7033501
+104279,"Kouvola","FI","Kouvola Ummeljoki",60.7662315,26.7620392
+104365,"Suomi","FI","Kristiinankaupunki",62.2729988,21.3633804
+104024,"Kristiinankaupunki","FI","Kristiinankaupunki3",62.2735596,21.3889694
+104301,"Kuopio","FI","Kuopio Haapaniemi 2",62.8852081,27.6699104
+100882,"Kuopio","FI","Kuopio Haminalahti",62.8497009,27.5287991
+104236,"Kuopio","FI","Kuopio Itkonniemi",62.8989792,27.7204494
+102102,"Kuopio","FI","Kuopio Kasarmipuisto",62.8936005,27.6695194
+103983,"Kuopio","FI","Kuopio Kelloniemi 3",62.9196701,27.7055302
+107541,"Kuopio","FI","Kuopio Kurkimäki",62.7810211,27.4967709
+103093,"Kuopio","FI","Kuopio Maaherrankatu",62.8933411,27.6868801
+104098,"Kuopio","FI","Kuopio Niirala",62.8887482,27.6539707
+104006,"Kuopio","FI","Kuopio Puistokatu",62.8937302,27.6708794
+106954,"Kuopio","FI","Kuopio Savilahti KYS",62.8955307,27.6472492
+103094,"Kuopio","FI","Kuopio Sorsasalo",62.9552917,27.6979694
+103095,"Kuopio","FI","Kuopio Tasavallankatu",62.8819809,27.6609306
+103130,"Lahti","FI","Lahti Kisapuisto",60.9878082,25.6495399
+103131,"Lahti","FI","Lahti Laune Pohjoinen Liipolankatu",60.9670410,25.6548901
+104280,"Lahti","FI","Lahti Metsäkangas",60.9782410,25.5880604
+107282,"Lahti","FI","Lahti Mustamäenkatu",60.9627113,25.6436901
+103132,"Lahti","FI","Lahti Saimaankatu",60.9912910,25.6657906
+103133,"Lahti","FI","Lahti Satulakatu",60.9790688,25.5910892
+104161,"Lahti","FI","Lahti Tori",60.9838219,25.6553097
+103134,"Lahti","FI","Lahti Vesku 11",60.9838905,25.6621799
+104094,"Lahti","FI","Lahti Yrittäjänkatu",60.9851494,25.7263203
+104362,"Lappeenranta","FI","Lappeenrannan keskusta",61.0555687,28.1847095
+104018,"Lappeenranta","FI","Lappeenrannan keskusta 2",61.0594101,28.1951599
+104043,"Lappeenranta","FI","Lappeenrannan keskusta 3",61.0592117,28.2276802
+103114,"Lappeenranta","FI","Lappeenranta Ihalainen",61.0408211,28.1765003
+107563,"Lappeenranta","FI","Lappeenranta Ihalainen 2",61.0387917,28.1763496
+103115,"Lappeenranta","FI","Lappeenranta Joutsenon keskusta",61.1170883,28.4984894
+103116,"Lappeenranta","FI","Lappeenranta keskusta 4",61.0557594,28.1843109
+103117,"Lappeenranta","FI","Lappeenranta Lauritsala",61.0719414,28.2640896
+107379,"Lappeenranta","FI","Ojala-Tuomela",61.0343399,28.2124100
+104262,"Lappeenranta","FI","Lappeenranta Palolaitos, Joutseno",61.1122513,28.4847107
+103120,"Lappeenranta","FI","Lappeenranta Pulp",61.1253586,28.4507809
+104357,"Lappeenranta","FI","Lappeenranta Pulpin kirjasto",61.1223602,28.4462891
+104306,"Lappeenranta","FI","Lappeenranta Pulpin K-lähikauppa",61.1236115,28.4469109
+103123,"Lappeenranta","FI","Lappeenranta Tirilä Pekkasenkatu",61.0574799,28.2458496
+107147,"Lohja","FI","Lohja Harjula",60.2490311,24.0694695
+104106,"Lohja","FI","Lohja, Keskusta",60.2503891,24.0629101
+107543,"Lohja","FI","Lohja Moisio",60.2529411,24.0786095
+104331,"Lohja","FI","Lohja Nahkurintori",60.2512703,24.0629196
+103144,"Lohja","FI","Lohja Nahkurintori 2",60.2514496,24.0628700
+104353,"Lohja","FI","Lohja Virkkalan terveysasema",60.1884613,23.9984207
+104330,"Luoto","FI","Luoto Risö",63.7185783,22.7521400
+103153,"Luoto","FI","Luoto Vikarholmen",63.7028694,22.7647305
+105404,"Maarianhamina","FI","Österleden",60.1041718,19.9449291
+103149,"Mikkeli","FI","Mikkeli Porrassalmenkatu",61.6863594,27.2733402
+103984,"Mikkeli","FI","Mikkeli Vilhonkatu",61.6862717,27.2723904
+104149,"Naantali","FI","Naantali Karvetti",60.4789314,22.0504704
+100824,"Naantali","FI","Naantali keskusta Asematori",60.4674416,22.0284004
+104077,"Närpiö","FI","Närpiö 2",62.4726982,21.3360806
+104334,"Närpiö","FI","Närpiö Piolahti",62.3840904,21.3671703
+104097,"Lahti","FI","Nastola Kukkasen koulu",60.9489784,25.9088306
+103125,"Oulu","FI","Oulu keskusta 2",65.0099716,25.4713192
+104286,"Oulu","FI","Oulu Mustasuo",65.0517273,25.4443398
+104128,"Oulu","FI","Oulun keskusta",65.0100327,25.4734802
+103124,"Oulu","FI","Oulu Nokela",64.9947281,25.4792595
+103126,"Oulu","FI","Oulu Pyykösjärvi",65.0433807,25.4979000
+104130,"Oulu","FI","Oulu Simssi",65.0405273,25.4553795
+104129,"Oulu","FI","Oulu Välivainio",65.0330582,25.4887199
+104064,"Suomi","FI","Parainen",60.2967796,22.2992706
+100843,"Parainen","FI","Parainen Parainen",60.3037186,22.2829399
+103152,"Pietarsaari","FI","Pietarsaari Bottenviksvägen",63.6791191,22.7183704
+103979,"Pietarsaari","FI","Pietarsaari Korsgrundet",63.6933098,22.6954899
+104288,"Pori","FI","Pori Ahlainen",61.6751518,21.6187096
+104000,"Pori","FI","Pori Aittaluoto",61.4897995,21.8088608
+104208,"Pori","FI","Pori Itätulli",61.4824295,21.7984505
+104101,"Pori","FI","Pori Itätulli 2",61.4827003,21.7996902
+103136,"Pori","FI","Pori keskusta",61.4826012,21.7996807
+106420,"Pori","FI","Pori Paanakedonkatu",61.4822617,21.8132896
+103135,"Pori","FI","Pori Pastuskeri",61.6632500,21.4548397
+104214,"Porvoo","FI","Porvoo Kiiala N-17",60.4078789,25.6160297
+104029,"Porvoo","FI","Porvoo Mannerheiminkatu",60.3944283,25.6606903
+103139,"Porvoo","FI","Porvoo Mustijoki",60.3600502,25.5660496
+103140,"Porvoo","FI","Porvoo Nyby",60.3171806,25.5018291
+104308,"Porvoo","FI","Porvoo Riemari",60.3208199,25.5411701
+103141,"Porvoo","FI","Porvoo Svartbäck",60.2872581,25.5108299
+107625,"Porvoo","FI","Porvoo Vanha Porvoo",60.3981895,25.6604996
+103147,"Raahe","FI","Raahe keskusta",64.6833725,24.4816208
+103145,"Raahe","FI","Raahe Lapaluoto",64.6676865,24.4192791
+103146,"Raahe","FI","Raahe Merikatu",64.6767120,24.4689808
+104315,"Raahe","FI","Raahe Ollinsaari",64.6793518,24.4993896
+104314,"Raahe","FI","Raahe Saloinen",64.6532593,24.4545898
+104294,"Raahe","FI","Raahe Varikko",64.6766968,24.4689503
+106630,"Raisio","FI","Raisio Ihala",60.4703789,22.1902008
+104347,"Raisio","FI","Raisio Kaanaa",60.4692802,22.1089096
+100804,"Raisio","FI","Raisio Kaanaan koulu",60.4684601,22.1052303
+100844,"Raisio","FI","Raisio keskusta",60.4822502,22.1655006
+104361,"Rauma","FI","Rauma Sampaanala 2",61.1074219,21.4920807
+778578,"Rauma","FI","Rauma Sinisaari",61.1246986,21.4934292
+103113,"Rauma","FI","Rauma Tarvonsaari Hallikatu",61.1298599,21.4997005
+103815,"Rovaniemi","FI","Rovaniemi Etelärinne",66.5072784,25.6940899
+107620,"Rovaniemi","FI","Mellakuja",66.5156937,25.6559105
+103816,"Rovaniemi","FI","Rovaniemi Rovakatu",66.5000381,25.7269993
+104045,"Savonlinna","FI","Savonlinna Olavinkatu",61.8705902,28.8761292
+104268,"Seinäjoki","FI","Seinäjoki Vapaudentie",62.7875214,22.8343201
+103110,"Seinäjoki","FI","Seinäjoki Vapaudentie 6a",62.7781982,22.8394794
+107026,"Siilinjärvi","FI","Siilinjärvi Kuuslahti",63.1272316,27.7717800
+104099,"Siilinjärvi","FI","Siilinjärvi Pahkamäki",63.1752701,27.7710991
+107542,"Siilinjärvi","FI","Siilinjärvi Ranta",63.1113396,27.7601891
+104017,"Siilinjärvi","FI","Siilinjärvi Sorakuja",63.0723991,27.6611500
+107268,"Siilinjärvi","FI","Siilinjärvi Sulkavanniitty",63.0879593,27.6863594
+104044,"Siilinjärvi","FI","Siilinjärvi Vuorela",62.9847717,27.6903191
+107135,"Siilinjärvi","FI","Siilinjärvi Vuorelantie",62.9752884,27.7019997
+104309,"Sipoo","FI","Sipoo Löparö",60.2385712,25.4440899
+103999,"Sipoo","FI","Sipoo Löparö 2",60.2376404,25.4417801
+107992,"Sotkamo","FI","Sotkamo Terrafame Taattola",64.0021515,28.1077404
+104327,"Äänekoski","FI","Suolahti",62.5656700,25.8523693
+104014,"Suomussalmi","FI","Suomussalmi Kuivajärvi",64.6426086,30.0666904
+103096,"Tampere","FI","Tampere Epila 2",61.5085411,23.6758308
+103097,"Tampere","FI","Tampere Kaleva",61.4990997,23.8022099
+104228,"Tampere","FI","Tampere, keskustori",61.4975395,23.7621307
+104001,"Tampere","FI","Tampere Koskikatu",61.4984398,23.7649498
+104283,"Tampere","FI","Tampere Lielahti, Isoniemenkatu",61.5283394,23.6850300
+103098,"Tampere","FI","Tampere Linja-autoasema",61.4930687,23.7693806
+104003,"Tampere","FI","Tampere Linnainmaa",61.4916000,23.8813896
+104034,"Tampere","FI","Tampere Lintulampi",61.5220909,23.6662407
+104297,"Tampere","FI","Tampere Messukylä",61.4843788,23.8481903
+104040,"Tampere","FI","Tampere Niemi",61.5223312,23.6871300
+103099,"Tampere","FI","Tampere Pirkankatu",61.4987297,23.7356892
+104285,"Tampere","FI","Tampere Raatihuone",61.4978905,23.7596798
+104107,"Tampere","FI","Tampere Santalahti",61.5053596,23.7162399
+104027,"Tampere","FI","Tampere Veisu",61.4719315,23.8002205
+107142,"Tornio","FI","Tornio Keskusta",65.8429565,24.1474895
+107141,"Tornio","FI","Näätsaari",65.8160629,24.1637192
+104201,"Tornio","FI","Tornio Pudas",65.8414230,24.1718693
+104287,"Turku","FI","Turku Aninkaistenkatu",60.4534187,22.2735291
+104363,"Turku","FI","Turku Aninkaistensilta",60.4578896,22.2689095
+104307,"Turku","FI","Turku Hämeenkatu",60.4542885,22.2873306
+100862,"Turku","FI","Turku Kauppatori",60.4519501,22.2676792
+107569,"Turku","FI","Turku Kauppatori 2",60.4518318,22.2678299
+106797,"Turku","FI","Turku Kauppatori väliaikainen",60.4519997,22.2667999
+104323,"Turku","FI","Turku Korppolaismäki",60.4334297,22.2383709
+100842,"Turku","FI","Turku Oriketo",60.4769897,22.3094406
+104324,"Turku","FI","Turku Puistokatu",60.4464989,22.2527905
+104226,"Turku","FI","Turku Ruissalo Kallanpää",60.4308205,22.1258392
+100845,"Turku","FI","Turku Ruissalo Saarontie",60.4253197,22.0961094
+104336,"Turku","FI","Turku Uudenmaantie",60.4356117,22.2937202
+104325,"Turku","FI","Turku Varissuo",60.4423294,22.3564091
+104110,"Tuusula","FI","Tuusula (Järvenpääntie)",60.3966599,25.0215607
+107280,"Tuusula","FI","Tuusula Vaunukangas",60.4086685,25.0014992
+103104,"Vaasa","FI","Vaasa keskusta Vaasanpuistikko",63.0951500,21.6183205
+104260,"Vaasa","FI","Vaasan Sähkö",63.1011810,21.6029301
+103103,"Vaasa","FI","Vaasa Vesitorni",63.1012115,21.6040707
+103137,"Valkeakoski","FI","Valkeakoski Hiekkatekonurmi",61.2715607,24.0284901
+104013,"Valkeakoski","FI","Valkeakoski Roukko",61.2840881,24.0188904
+104276,"Valkeakoski","FI","Valkeakoski Terveyskeskus, linja 2",61.2714195,24.0309601
+103138,"Valkeakoski","FI","Valkeakoski Valkeakosken terveyskeskus",61.2714195,24.0309601
+104102,"Vantaa","FI","Vantaa Askisto",60.2810707,24.7789307
+103996,"Vantaa","FI","Vantaa Hakunila",60.2787895,25.0934601
+104070,"Vantaa","FI","Vantaa Hakunila2",60.2839584,25.0935497
+104083,"Vantaa","FI","Vantaa Hämeenlinnanväylä",60.2719612,24.8745098
+104103,"Vantaa","FI","Vantaa Helsingin pitäjän kk",60.2831192,24.9794807
+104056,"Vantaa","FI","Vantaa Itä-Hakkila",60.2917519,25.1124191
+104076,"Vantaa","FI","Vantaa Kehä III Varisto",60.2817993,24.8246098
+104036,"Vantaa","FI","Vantaa Kivistö",60.3170013,24.8401508
+104051,"Vantaa","FI","Vantaa Koivuhaka",60.2877998,25.0018196
+104011,"Vantaa","FI","Vantaa Korso",60.3499184,25.0718098
+104048,"Vantaa","FI","Vantaa Lentoasema",60.3143082,24.9727707
+104242,"Vantaa","FI","Vantaa Martinlaakso",60.2796593,24.8452091
+103990,"Vantaa","FI","Vantaa Myyrmäki",60.2639198,24.8491096
+104063,"Vantaa","FI","Vantaa Myyrmäki2",60.2593689,24.8562393
+104066,"Vantaa","FI","Vantaa Päiväkumpu",60.3235016,25.0921803
+104021,"Vantaa","FI","Vantaa Ruskeasanta",60.3155289,25.0046196
+104080,"Vantaa","FI","Vantaa Ruskeasanta 2",60.3120308,25.0110302
+104341,"Vantaa","FI","Vantaa Sotunki",60.2746201,25.1356602
+104342,"Vantaa","FI","Vantaa Tammisto 1",60.2706490,24.9680099
+104033,"Vantaa","FI","Vantaa Tammisto 2",60.2704811,24.9692307
+104359,"Vantaa","FI","Vantaa Tikkurila, Asematie",60.2934494,25.0397606
+100763,"Vantaa","FI","Vantaa Tikkurila Neilikkatie",60.2899513,25.0395298
+106951,"Vantaa","FI","Vantaa Tikkurila Talvikkitie",60.2950897,25.0331593
+107281,"Vantaa","FI","Vantaa Ylästö",60.2780685,24.9071102
+107382,"Varkaus","FI","Varkaus Kommila",62.3291016,27.8857002
+107063,"Varkaus","FI","Varkaus Kommila terveyskeskus",62.3286018,27.8899994
+103101,"Varkaus","FI","Varkaus Pääterveysasema",62.3295784,27.8893108
+103986,"Varkaus","FI","Varkaus Psaari",62.3129883,27.8852501
+103100,"Varkaus","FI","Varkaus Psaari 2",62.3139114,27.8869896
+103102,"Varkaus","FI","Varkaus Taulumäki (toripaviljonki)",62.3178787,27.8681107
+104191,"Varkaus","FI","Varkaus Vesilaitos",62.3220100,27.9075203
+107028,"Vihti","FI","Vihti Nummela",60.3308182,24.3074799
+104035,"Virolahti","FI","Virolahti Pajulahti/siirrettävä",60.5907707,27.7429409
+104060,"Virolahti","FI","Virolahti urheilukenttä/siirrettävä",60.5869484,27.7280293
