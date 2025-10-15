@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from typing import List
 from time import sleep
 import os.path
@@ -10,19 +8,19 @@ import polars as pl
 
 
 _AQ_FIELDS = {
-    'fmisid': pl.datatypes.Int32,
-    'utctime': pl.datatypes.Datetime,
-    'iso2': pl.datatypes.String,
-    'region': pl.datatypes.String,
-    'name': pl.datatypes.String,
-    'AQINDEX_PT1H_avg': pl.datatypes.Float64,
-    'PM10_PT1H_avg': pl.datatypes.Float64,
-    'PM25_PT1H_avg': pl.datatypes.Float64,
-    'O3_PT1H_avg': pl.datatypes.Float64,
-    'CO_PT1H_avg': pl.datatypes.Float64,
-    'SO2_PT1H_avg': pl.datatypes.Float64,
-    'NO2_PT1H_avg': pl.datatypes.Float64,
-    'TRSC_PT1H_avg': pl.datatypes.Float64,
+    'fmisid': pl.Int32,
+    'utctime': pl.Datetime,
+    'iso2': pl.String,
+    'region': pl.String,
+    'name': pl.String,
+    'AQINDEX_PT1H_avg': pl.Float64,
+    'PM10_PT1H_avg': pl.Float64,
+    'PM25_PT1H_avg': pl.Float64,
+    'O3_PT1H_avg': pl.Float64,
+    'CO_PT1H_avg': pl.Float64,
+    'SO2_PT1H_avg': pl.Float64,
+    'NO2_PT1H_avg': pl.Float64,
+    'TRSC_PT1H_avg': pl.Float64,
 }
 
 _TIMESERIES_URL = 'https://opendata.fmi.fi/timeseries'
