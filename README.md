@@ -12,6 +12,12 @@ Helsinki, all fields, default period, JSON.
 
 https://opendata.fmi.fi/timeseries?format=json&groupareas=0&producer=airquality_urban&area=Helsinki&param=time,fmisid,PM10_PT1H_avg,PM25_PT1H_avg,O3_PT1H_avg,CO_PT1H_avg,SO2_PT1H_avg,NO2_PT1H_avg,TRSC_PT1H_avg
 
+# ALL STATIONS, ALL VALUES, LAST DAY, USING KEYWORD
+
+https://opendata.fmi.fi/timeseries?format=csv&precision=double&groupareas=0&producer=airquality_urban&param=fmisid,iso2,region,name,latitude,longitude,isotime,PM10_PT1H_avg,PM25_PT1H_avg,O3_PT1H_avg,CO_PT1H_avg,SO2_PT1H_avg,NO2_PT1H_avg,TRSC_PT1H_avg&starttime=-1d&endtime=-0&keyword=air_quality_urban
+
+https://opendata.fmi.fi/timeseries?format=json&precision=double&groupareas=0&producer=airquality_urban&param=fmisid,iso2,region,name,latitude,longitude,isotime,PM10_PT1H_avg,PM25_PT1H_avg,O3_PT1H_avg,CO_PT1H_avg,SO2_PT1H_avg,NO2_PT1H_avg,TRSC_PT1H_avg&starttime=-1d&endtime=-0&keyword=air_quality_urban
+
 Bounding box for Uusimaa.
 
 https://opendata.fmi.fi/timeseries?format=ascii&separator=,&precision=double&groupareas=0&producer=airquality_urban&bbox=22.65,59.61,26.65,60.84&param=fmisid,time,PM10_PT1H_avg&timesteps=24
@@ -27,6 +33,8 @@ https://opendata.fmi.fi/timeseries?format=json&precision=double&timeformat=xml&g
 ### `fmisid` locations
 
 https://opendata.fmi.fi/timeseries?format=json&precision=double&groupareas=0&producer=airquality_urban&param=fmisid,region,name,latitude,longitude&starttime=-1d&timestep=1d&bbox=20.6455928891,59.846373196,31.5160921567,70.1641930203
+
+https://opendata.fmi.fi/timeseries?format=json&precision=double&groupareas=0&producer=airquality_urban&param=fmisid,region,iso2,name,latitude,longitude&starttime=-1d&timestep=1d&keyword=air_quality_urban
 
 ## Old and slow FMI WFS based stuff
 

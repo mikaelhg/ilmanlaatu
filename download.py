@@ -4,23 +4,25 @@ from typing import List
 from time import sleep
 import os.path
 
-import requests
+import httpx
 import pendulum
-import pandas as pd
-from rich.console import Console
+import polars as pl
 
 
 _AQ_FIELDS = {
-    'fmisid': 'int32[pyarrow]',
-    'utctime': 'datetime64[ns, UTC]',
-    'AQINDEX_PT1H_avg': 'float64[pyarrow]',
-    'PM10_PT1H_avg': 'float64[pyarrow]',
-    'PM25_PT1H_avg': 'float64[pyarrow]',
-    'O3_PT1H_avg': 'float64[pyarrow]',
-    'CO_PT1H_avg': 'float64[pyarrow]',
-    'SO2_PT1H_avg': 'float64[pyarrow]',
-    'NO2_PT1H_avg': 'float64[pyarrow]',
-    'TRSC_PT1H_avg': 'float64[pyarrow]',
+    'fmisid': pl.datatypes.Int32,
+    'utctime': pl.datatypes.Datetime,
+    'iso2': pl.datatypes.String,
+    'region': pl.datatypes.String,
+    'name': pl.datatypes.String,
+    'AQINDEX_PT1H_avg': pl.datatypes.Float64,
+    'PM10_PT1H_avg': pl.datatypes.Float64,
+    'PM25_PT1H_avg': pl.datatypes.Float64,
+    'O3_PT1H_avg': pl.datatypes.Float64,
+    'CO_PT1H_avg': pl.datatypes.Float64,
+    'SO2_PT1H_avg': pl.datatypes.Float64,
+    'NO2_PT1H_avg': pl.datatypes.Float64,
+    'TRSC_PT1H_avg': pl.datatypes.Float64,
 }
 
 _TIMESERIES_URL = 'https://opendata.fmi.fi/timeseries'
@@ -33,31 +35,26 @@ def fetch(
     end_time: pendulum.DateTime = pendulum.tomorrow('UTC'),
     fields: List[str] = list(_AQ_FIELDS.keys()),
     other_params: dict = dict(),
-) -> List[dict]:
+) -> pl.DataFrame:
     params = {
         'format': 'json',
         'timeformat': 'xml',
         'precision': 'double',
         'groupareas': '0',
         'producer': 'airquality_urban',
+        'keyword': 'air_quality_urban',
         'param': ','.join(fields),
-        'bbox': '20.6455928891,59.846373196,31.5160921567,70.1641930203',
         'starttime': start_time.isoformat(timespec="seconds"),
         'endtime': end_time.isoformat(timespec="seconds"),
         'tz': 'UTC',  # Output TZ
         **other_params,
     }
-    result = requests.get(_TIMESERIES_URL, params=params)
+    result = httpx.get(_TIMESERIES_URL, params=params)
     result.raise_for_status()
-    return result.json()
-
-
-def to_df(data: List[dict], types: dict = _AQ_FIELDS) -> pd.DataFrame:
-    return pd.DataFrame(data).astype(types)
+    return pl.read_json(result.content)
 
 
 def main():
-    console = Console()
     st = pendulum.today('UTC')
 
     while True:
@@ -65,12 +62,11 @@ def main():
         et = st.add(hours=23, minutes=59)
         file_name = f'''./data/airquality_{st.date().isoformat()}.parquet'''
         if not os.path.exists(file_name):
-            console.print(f"getting {file_name}")
-            data = fetch(st, et)
-            if not data or len(data) == 0:
+            print(f"getting {file_name}")
+            df = fetch(st, et)
+            if len(df) == 0:
                 break
-            df = to_df(data)
-            df.to_parquet(file_name, compression='gzip')
+            df.write_parquet(file_name, compression='zstd')
             sleep(_SLEEP_BETWEEN_QUERIES)
 
 
