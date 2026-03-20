@@ -49,7 +49,7 @@ def fetch(
     }
     result = httpx.get(_TIMESERIES_URL, params=params)
     result.raise_for_status()
-    return pl.read_json(result.content)
+    return pl.read_json(result.content, schema=_AQ_FIELDS)
 
 
 def main():
@@ -64,8 +64,11 @@ def main():
             df = fetch(st, et)
             if len(df) == 0:
                 break
-            df.write_parquet(file_name, compression='zstd')
-            sleep(_SLEEP_BETWEEN_QUERIES)
+            df.write_parquet(file_name, compression_level=19)
+            try:
+                sleep(_SLEEP_BETWEEN_QUERIES)
+            except KeyboardInterrupt:
+                break
 
 
 if __name__ == '__main__':
