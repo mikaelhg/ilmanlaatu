@@ -1,0 +1,67 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild dev",
+    "preview": "rsbuild preview",
+    "lint": "biome lint src",
+    "lint:fix": "biome lint src --fix",
+    "format": "biome format src --write",
+    "check": "biome check src",
+    "check:fix": "biome check src --fix",
+    "biome:upgrade": "biome migrate --write",
+    "test": "rstest run",
+    "test:watch": "rstest --watch",
+    "ci:lint": "biome ci src",
+    "ci:typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-icons": "^5.6.0",
+    "react-redux": "^9.2.0",
+    "react-vega": "^8.0.0",
+    "tailwindcss": "^4.2.2",
+    "vega-embed": "^7.1.0",
+    "vega-lite": "^6.4.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.8",
+    "@rsbuild/core": "^1.7.3",
+    "@rsbuild/plugin-react": "^1.4.6",
+    "@rstest/adapter-rsbuild": "^0.2.4",
+    "@rstest/core": "^0.8.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "happy-dom": "^20.8.4",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "browserslist": {
+    "production": [
+      "last 2 Chrome versions",
+      "last 2 Firefox versions",
+      "last 2 Safari versions",
+      "last 2 Edge versions"
+    ],
+    "development": [
+      "last 1 Chrome version",
+      "last 1 Firefox version",
+      "last 1 Safari version"
+    ]
+  }
+}
