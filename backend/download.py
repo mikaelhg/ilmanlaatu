@@ -47,7 +47,8 @@ def fetch(
         'tz': 'UTC',  # Output TZ
         **other_params,
     }
-    result = httpx.get(_TIMESERIES_URL, params=params)
+    client = httpx.Client(http2=True)
+    result = client.get(_TIMESERIES_URL, params=params)
     result.raise_for_status()
     return pl.read_json(result.content, schema=_AQ_FIELDS)
 
