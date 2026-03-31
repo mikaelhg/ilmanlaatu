@@ -4,13 +4,8 @@ body {
   font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-html,
 body {
     margin: 0px;
     padding: 0px;
-}
-
-.vega-embed {
-    height: 98dvh;
-    width: 98dvw;
+    container-type: inline-size;
 }
