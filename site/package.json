@@ -34,7 +34,7 @@
     "@rsbuild/core": "^1.7.5",
     "@rsbuild/plugin-react": "^1.4.6",
     "@rstest/adapter-rsbuild": "^0.2.4",
-    "@rstest/core": "^0.8.5",
+    "@rstest/core": "^0.9.5",
     "@tailwindcss/postcss": "^4.2.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
