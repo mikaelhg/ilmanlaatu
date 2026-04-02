@@ -5,46 +5,61 @@ on:
     branches: ["master"]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {}
 
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          fetch-depth: 1
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version-file: './site/package.json'
 
       - uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
         with:
-          version: latest
+          version: "10.33"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v5
 
       - name: Build site
         run: |
           cd site
-          pnpm install --frozen-lockfile
+          pnpm install --frozen-lockfile --ignore-scripts
+          pnpm audit --prod --audit-level high
           pnpm build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
           path: './site/dist'
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
 
       - name: Deploy to GitHub Pages
         id: deployment
