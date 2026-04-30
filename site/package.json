@@ -26,12 +26,12 @@
     "react-redux": "^9.2.0",
     "react-vega": "^8.0.0",
     "vega-embed": "^7.1.0",
-    "vega-lite": "^6.4.2",
+    "vega-lite": "^6.4.3",
     "zod": "^4.3.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.13",
-    "@rsbuild/core": "^2.0.1",
+    "@rsbuild/core": "^2.0.3",
     "@rsbuild/plugin-react": "^2.0.0",
     "@rstest/adapter-rsbuild": "^0.2.6",
     "@rstest/core": "^0.9.9",
