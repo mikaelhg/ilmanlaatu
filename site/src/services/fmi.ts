@@ -1,4 +1,4 @@
-import type { Locale } from "vega-typings"
+import type { Locale } from "vega-typings";
 
 export const getFmiUrl = (field: string) => {
   const baseUrl = "https://opendata.fmi.fi/timeseries";
@@ -9,7 +9,7 @@ export const getFmiUrl = (field: string) => {
     tz: "UTC",
     groupareas: "0",
     producer: "airquality_urban",
-    bbox: ["22.65", "59.61", "26.65", "60.84"].join(','),
+    bbox: ["22.65", "59.61", "26.65", "60.84"].join(","),
     param: ["fmisid", "time", field].join(","),
     starttime: "-7d",
     endtime: "-0",
@@ -63,6 +63,6 @@ export const finnishLocale = (): Locale => {
         "Marras",
         "Joulu",
       ],
-    }
-  }
+    },
+  };
 };

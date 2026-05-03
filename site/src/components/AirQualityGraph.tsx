@@ -1,9 +1,12 @@
 import { VegaEmbed } from "react-vega";
 import type { VisualizationSpec } from "vega-embed";
-import { string } from "zod";
-import { getFmiUrl, finnishLocale } from "../services/fmi";
+import { finnishLocale, getFmiUrl } from "../services/fmi";
 
-const spec = (field: string, title: string, domainMax: number = 100) : VisualizationSpec => {
+function spec(
+  field: string,
+  title: string,
+  domainMax = 100,
+): VisualizationSpec {
   return {
     $schema: "https://vega.github.io/schema/vega-lite/v6.json",
     description: title,
@@ -105,18 +108,23 @@ const spec = (field: string, title: string, domainMax: number = 100) : Visualiza
         },
       },
     ],
-  }
-};
+  };
+}
 
 const options = {
   actions: false,
 };
 
-function AirQualityGraph({field, title, domainMax = 100}: {field: string, title: string, domainMax: number}) {
-  const graphSpec = spec(field, title, domainMax)
+interface AirQualityProps {
+  field: string;
+  title: string;
+  domainMax: number;
+}
+
+function AirQualityGraph({ field, title, domainMax = 100 }: AirQualityProps) {
+  const graphSpec = spec(field, title, domainMax);
   return (
-    <VegaEmbed className="w-[98dvw] h-[49dvh]"
-      spec={graphSpec} options={options} />
+    <VegaEmbed className="h-full w-full" spec={graphSpec} options={options} />
   );
 }
 
