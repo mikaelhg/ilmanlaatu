@@ -1,0 +1,4 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "biome.configurationPath": "site/biome.json"
+}
