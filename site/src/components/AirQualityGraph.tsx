@@ -2,7 +2,7 @@ import { VegaEmbed } from "react-vega";
 import type { VisualizationSpec } from "vega-embed";
 import { finnishLocale, getFmiUrl } from "../services/fmi";
 
-function spec(
+function makeVegaSpec(
   field: string,
   title: string,
   domainMax = 100,
@@ -122,9 +122,9 @@ interface AirQualityProps {
 }
 
 function AirQualityGraph({ field, title, domainMax = 100 }: AirQualityProps) {
-  const graphSpec = spec(field, title, domainMax);
+  const spec = makeVegaSpec(field, title, domainMax);
   return (
-    <VegaEmbed className="h-full w-full" spec={graphSpec} options={options} />
+    <VegaEmbed className="h-full w-full" spec={spec} options={options} />
   );
 }
 
