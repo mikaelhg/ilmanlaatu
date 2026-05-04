@@ -1,5 +1,6 @@
 import type { VisualizationSpec } from "vega-embed";
-import { finnishLocale, getFmiUrl } from "../services/fmi";
+import type { Locale } from "vega-typings";
+import { getFmiUrl } from "../services/fmi";
 
 export function makeVegaSpec(
   field: string,
@@ -112,4 +113,53 @@ export function makeVegaSpec(
 
 export const vegaOptions = {
   actions: false,
+};
+
+export const finnishLocale = (): Locale => {
+  return {
+    time: {
+      dateTime: "%A, %-d. %Bta %Y klo %X",
+      date: "%-d.%-m.%Y",
+      time: "%H:%M:%S",
+      periods: ["", ""],
+      days: [
+        "sunnuntai",
+        "maanantai",
+        "tiistai",
+        "keskiviikko",
+        "torstai",
+        "perjantai",
+        "lauantai",
+      ],
+      shortDays: ["Su", "Ma", "Ti", "Ke", "To", "Pe", "La"],
+      months: [
+        "tammikuu",
+        "helmikuu",
+        "maaliskuu",
+        "huhtikuu",
+        "toukokuu",
+        "kesäkuu",
+        "heinäkuu",
+        "elokuu",
+        "syyskuu",
+        "lokakuu",
+        "marraskuu",
+        "joulukuu",
+      ],
+      shortMonths: [
+        "Tammi",
+        "Helmi",
+        "Maalis",
+        "Huhti",
+        "Touko",
+        "Kesä",
+        "Heinä",
+        "Elo",
+        "Syys",
+        "Loka",
+        "Marras",
+        "Joulu",
+      ],
+    },
+  };
 };
