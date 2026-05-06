@@ -17,7 +17,7 @@
     "test:watch": "rstest --watch",
     "ci:lint": "biome ci src",
     "ci:typecheck": "tsc --noEmit",
-    "update:packageManager": "corepack use pnpm@latest"
+    "update:packageManager": "corepack use pnpm@latest-11"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
