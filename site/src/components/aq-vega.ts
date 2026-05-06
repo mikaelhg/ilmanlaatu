@@ -10,6 +10,12 @@ export function makeVegaSpec(
   return {
     $schema: "https://vega.github.io/schema/vega-lite/v6.json",
     description: title,
+    title: {
+      text: title,
+      anchor: "end",
+      dy: 35,
+      dx: -20,
+    },
     width: "container",
     height: "container",
     autosize: {
@@ -64,7 +70,7 @@ export function makeVegaSpec(
           y: {
             field: field,
             type: "quantitative",
-            title: title,
+            title: null,
             scale: {
               domainMin: 0,
               domainMax: domainMax,

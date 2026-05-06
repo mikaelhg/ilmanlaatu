@@ -10,10 +10,10 @@ export default function MainView() {
         <AirQualityGraph field="QBCPM25_PT1H_avg" domainMax={5} title="Black coal" />
       </div>
       <div className="h-half-svh">
-        <AirQualityGraph field="PM25_PT1H_avg" domainMax={50} title="PM2.5 in Helsinki" />
+        <AirQualityGraph field="PM25_PT1H_avg" domainMax={25} title="PM2.5" />
       </div>
       <div className="h-half-svh">
-        <AirQualityGraph field="PM10_PT1H_avg" domainMax={100} title="PM10 in Helsinki" />
+        <AirQualityGraph field="PM10_PT1H_avg" domainMax={100} title="PM10" />
       </div>
     </div>
   );
