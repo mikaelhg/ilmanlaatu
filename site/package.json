@@ -28,7 +28,7 @@
     "vega-embed": "^7.1.0",
     "vega-lite": "^6.4.3",
     "vega-typings": "^2.1.0",
-    "zod": "^4.4.2"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.14",
