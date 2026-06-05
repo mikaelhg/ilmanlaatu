@@ -6,6 +6,8 @@
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev",
+    "compress:zstd": "zstd -T0 -fk -16 dist/*.js || true",
+    "compress:brotli": "brotli -fk dist/*.js || true",
     "preview": "rsbuild preview",
     "lint": "biome lint src",
     "lint:fix": "biome lint src --fix",
@@ -17,7 +19,7 @@
     "test:watch": "rstest --watch",
     "ci:lint": "biome ci src",
     "ci:typecheck": "tsc --noEmit",
-    "update:packageManager": "corepack use pnpm@latest-11"
+    "update:packageManager": "corepack use pnpm@latest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
@@ -46,7 +48,7 @@
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@11.0.6+sha512.97f906e1da2bedac3df83cadae04b4753a130092dd49d55cd36825ad3e623e9df3f97754f8f259e699172a360fac569acf2f908e7732bdae3eddb2dcf7e121fd",
+  "packageManager": "pnpm@11.5.2+sha512.71c631e382066efc25625d5cf029075de07b61b37f6e27350fbd84b1bda5864c8c1967adc280776b45c30a715c0359a3be08fef42d5bb09e2b99029979692916",
   "engines": {
     "node": ">=24",
     "pnpm": ">=11"
