@@ -23,3 +23,7 @@ updates:
     directory: "/backend"
     schedule:
       interval: "monthly"
+    groups:
+      uv-dependencies:
+        patterns:
+          - "*"
