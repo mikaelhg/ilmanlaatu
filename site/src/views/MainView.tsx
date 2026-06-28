@@ -2,7 +2,7 @@ import AirQualityGraph from "../components/AirQualityGraph";
 
 export default function MainView() {
   return (
-    <div className="grid grid-cols-2 h-svh overflow-hidden">
+    <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-2 md:grid-rows-2 h-svh overflow-hidden">
       <div className="h-half-svh">
         <AirQualityGraph field="AQINDEX_PT1H_avg" domainMax={5} title="Air quality index" />
       </div>
