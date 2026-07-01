@@ -33,7 +33,7 @@
     "vega-typings": "^2.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.1",
+    "@biomejs/biome": "^2.5.2",
     "@rsbuild/core": "^2.1.2",
     "@rsbuild/plugin-react": "^2.1.0",
     "@rstest/adapter-rsbuild": "^0.10.6",
