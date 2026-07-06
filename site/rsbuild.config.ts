@@ -12,5 +12,14 @@ export default defineConfig({
       js: '',
       css: '',
     },
+    filename: {
+      js: 'app.js',
+      css: 'app.css',
+    },
+  },
+  performance: {
+    chunkSplit: {
+      strategy: 'all-in-one',
+    },
   },
 });

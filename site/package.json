@@ -6,8 +6,6 @@
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev",
-    "compress:zstd": "zstd -T0 -fk -16 dist/*.js || true",
-    "compress:brotli": "brotli -fk dist/*.js || true",
     "preview": "rsbuild preview",
     "lint": "biome lint src",
     "lint:fix": "biome lint src --fix",
@@ -18,6 +16,7 @@
     "test": "rstest run",
     "test:watch": "rstest --watch",
     "ci:lint": "biome ci src",
+    "ci:compress": "zstd -T0 -vfk -16 --rsyncable dist/*.css dist/*.js dist/*.html && brotli -f -k -Z dist/*.css dist/*.js dist/*.html && gzip -fk -9 dist/*.css dist/*.js dist/*.html",
     "ci:typecheck": "tsc --noEmit",
     "update:packageManager": "corepack use pnpm@latest"
   },
@@ -34,7 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.2",
-    "@rsbuild/core": "^2.1.3",
+    "@rsbuild/core": "^2.1.4",
     "@rsbuild/plugin-react": "^2.1.0",
     "@rstest/adapter-rsbuild": "^0.10.6",
     "@rstest/core": "^0.10.6",
@@ -48,7 +47,7 @@
     "tailwindcss": "^4.3.2",
     "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b",
+  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8",
   "engines": {
     "node": ">=24",
     "pnpm": ">=11"
