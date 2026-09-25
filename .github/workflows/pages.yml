@@ -15,6 +15,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: site
     permissions:
       contents: read
 
@@ -26,19 +29,18 @@ jobs:
 
       - uses: pnpm/setup@fbda4c85fc2e1e08721cd8763afea8f48d60f024 # v3,0.0
         with:
-          working-directory: site
+          require-lockfile: true
 
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
       - name: Build site
         run: |
-          cd site
           pnpm audit --prod --audit-level high
           pnpm build
 
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: './site/dist'
+          path: './dist'
 
   deploy:
     needs: build
