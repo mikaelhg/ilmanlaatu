@@ -45,3 +45,4 @@ https://en.ilmatieteenlaitos.fi/open-data-manual
 https://github.com/fmidev/smartmet-plugin-wfs/blob/master/cnf/opendata_stored_queries_github/urban::observations::airquality::hourly::multipointcoverage.conf
 
 http://catalog.fmi.fi/geonetwork/srv/fin/catalog.search#/metadata/cf1b68b2-78d8-481c-9c2c-2b950214d477
+
