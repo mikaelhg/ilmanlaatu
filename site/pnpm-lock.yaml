@@ -198,17 +198,17 @@ importers:
         specifier: ^2.5.14
         version: 2.5.14
       '@rsbuild/core':
-        specifier: ^2.2.9
-        version: 2.2.9
+        specifier: ^2.2.10
+        version: 2.2.10
       '@rsbuild/plugin-react':
-        specifier: ^2.1.0
-        version: 2.1.0(@rsbuild/core@2.2.9)(@rspack/core@2.2.7(@swc/helpers@0.5.23))
+        specifier: ^2.1.1
+        version: 2.1.1(@rsbuild/core@2.2.10)(@rspack/core@2.2.7(@swc/helpers@0.5.23))
       '@rstest/adapter-rsbuild':
-        specifier: ^0.12.1
-        version: 0.12.1(@rsbuild/core@2.2.9)(@rstest/core@0.12.1(happy-dom@20.14.5))
+        specifier: ^0.12.2
+        version: 0.12.2(@rsbuild/core@2.2.10)(@rstest/core@0.12.2(happy-dom@20.14.5))
       '@rstest/core':
-        specifier: ^0.12.1
-        version: 0.12.1(happy-dom@20.14.5)
+        specifier: ^0.12.2
+        version: 0.12.2(happy-dom@20.14.5)
       '@tailwindcss/postcss':
         specifier: ^4.3.3
         version: 4.3.3
@@ -360,8 +360,8 @@ packages:
       react-redux:
         optional: true
 
-  '@rsbuild/core@2.2.9':
-    resolution: {integrity: sha512-ZeOYQYIBOtYkfvmbNUiKEYBK1aMGE03mhuHKVcHiWk+Y63FuUTnuQtlr1RyLErh0E7F/KyDTIaraDVH3g3GNkA==}
+  '@rsbuild/core@2.2.10':
+    resolution: {integrity: sha512-j+QWzP5pyvNExFeEkOt0WU8kUWCOMIK004jF/8Vx6HsKrq+2tYtQvTuyLsopyeUrwBHZEd7zByeNjWbSNQkWqA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -370,8 +370,8 @@ packages:
       core-js:
         optional: true
 
-  '@rsbuild/plugin-react@2.1.0':
-    resolution: {integrity: sha512-RQTIAWB/CwPjoWt9iAl+8HixeQVgZ7kEIBrWPCixfITyHdiD84h0YpUTpEUuz6kGHw1KXT9mHZ3Rwy6WG7aRDA==}
+  '@rsbuild/plugin-react@2.1.1':
+    resolution: {integrity: sha512-tLtUedsRtTLS6M4VtwzI6aakFLOFdgl9Sh1ZNBWvxb0Te3EnHrppaE7UiYEmDUXQDJ50gfr6yyirtxY5N6moyg==}
     peerDependencies:
       '@rsbuild/core': ^2.0.0
     peerDependenciesMeta:
@@ -479,14 +479,14 @@ packages:
       '@rspack/core':
         optional: true
 
-  '@rstest/adapter-rsbuild@0.12.1':
-    resolution: {integrity: sha512-rGtKG+83tSek+S12LZV4HjZRXc+SY9nNU2zzGmSKASkHo1PrUbWTbsVRRfo1bexnCTg9wnbbyePnFZwMu1A/CA==}
+  '@rstest/adapter-rsbuild@0.12.2':
+    resolution: {integrity: sha512-bwdfYO1WAHxAbZzxUE025O6gprMo2UXFJXBNV6AusHd5RQnwq3zHot/hx9khmY0sFOYaQBEBFYql1gjH8UO2fQ==}
     peerDependencies:
       '@rsbuild/core': ^1.0.0 || ^2.0.0
       '@rstest/core': ^0.12.0
 
-  '@rstest/core@0.12.1':
-    resolution: {integrity: sha512-irrbH5VPqiHqIVM2Ta7Ib9sPyQ5Hsvxt0sSqqwRp/3j2by0sSu9ZeIMYzMEZj1puPwx2a8l3aFWW+Bk2ycKlEA==}
+  '@rstest/core@0.12.2':
+    resolution: {integrity: sha512-vDn3fCWnfv1UnjG0ZBUyDyQstRNEuceBFMLKuvPvsSm+8vTRj3ad0O2izRdj0MuPj4AqzgYVlDMv+cGBYHTUlw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1261,8 +1261,8 @@ packages:
       redux:
         optional: true
 
-  react-refresh@0.18.0:
-    resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
+  react-refresh@0.19.0:
+    resolution: {integrity: sha512-5HdstYgoJBbBofjapO5qCPcovECJCBfvjLb+iTcsmqDFVMRdqy0qs7iiInBJTUXmIFc2bjoc5b2HVLp2zRtYhQ==}
     engines: {node: '>=0.10.0'}
 
   react-vega@8.0.0:
@@ -1609,19 +1609,19 @@ snapshots:
       react: 19.3.0
       react-redux: 9.3.0(@types/react@19.3.0)(react@19.3.0)(redux@5.0.1)
 
-  '@rsbuild/core@2.2.9':
+  '@rsbuild/core@2.2.10':
     dependencies:
       '@rspack/core': 2.2.7(@swc/helpers@0.5.23)
       '@swc/helpers': 0.5.23
     transitivePeerDependencies:
       - '@module-federation/runtime-tools'
 
-  '@rsbuild/plugin-react@2.1.0(@rsbuild/core@2.2.9)(@rspack/core@2.2.7(@swc/helpers@0.5.23))':
+  '@rsbuild/plugin-react@2.1.1(@rsbuild/core@2.2.10)(@rspack/core@2.2.7(@swc/helpers@0.5.23))':
     dependencies:
-      '@rspack/plugin-react-refresh': 2.0.2(@rspack/core@2.2.7(@swc/helpers@0.5.23))(react-refresh@0.18.0)
-      react-refresh: 0.18.0
+      '@rspack/plugin-react-refresh': 2.0.2(@rspack/core@2.2.7(@swc/helpers@0.5.23))(react-refresh@0.19.0)
+      react-refresh: 0.19.0
     optionalDependencies:
-      '@rsbuild/core': 2.2.9
+      '@rsbuild/core': 2.2.10
     transitivePeerDependencies:
       - '@rspack/core'
 
@@ -1694,20 +1694,20 @@ snapshots:
     optionalDependencies:
       '@swc/helpers': 0.5.23
 
-  '@rspack/plugin-react-refresh@2.0.2(@rspack/core@2.2.7(@swc/helpers@0.5.23))(react-refresh@0.18.0)':
+  '@rspack/plugin-react-refresh@2.0.2(@rspack/core@2.2.7(@swc/helpers@0.5.23))(react-refresh@0.19.0)':
     dependencies:
-      react-refresh: 0.18.0
+      react-refresh: 0.19.0
     optionalDependencies:
       '@rspack/core': 2.2.7(@swc/helpers@0.5.23)
 
-  '@rstest/adapter-rsbuild@0.12.1(@rsbuild/core@2.2.9)(@rstest/core@0.12.1(happy-dom@20.14.5))':
+  '@rstest/adapter-rsbuild@0.12.2(@rsbuild/core@2.2.10)(@rstest/core@0.12.2(happy-dom@20.14.5))':
     dependencies:
-      '@rsbuild/core': 2.2.9
-      '@rstest/core': 0.12.1(happy-dom@20.14.5)
+      '@rsbuild/core': 2.2.10
+      '@rstest/core': 0.12.2(happy-dom@20.14.5)
 
-  '@rstest/core@0.12.1(happy-dom@20.14.5)':
+  '@rstest/core@0.12.2(happy-dom@20.14.5)':
     dependencies:
-      '@rsbuild/core': 2.2.9
+      '@rsbuild/core': 2.2.10
       '@types/chai': 5.2.3
       cjs-module-lexer: 2.2.1
     optionalDependencies:
@@ -2194,7 +2194,7 @@ snapshots:
       '@types/react': 19.3.0
       redux: 5.0.1
 
-  react-refresh@0.18.0: {}
+  react-refresh@0.19.0: {}
 
   react-vega@8.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(vega-embed@7.3.0(vega-lite@6.4.3(vega@6.4.0))(vega@6.4.0)):
     dependencies:
