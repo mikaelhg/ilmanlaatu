@@ -14,6 +14,7 @@
     "check:fix": "biome check src --fix",
     "biome:upgrade": "biome migrate --write",
     "test": "rstest run",
+    "test:live": "rstest run --include src/**/*.live.test.ts --exclude **/node_modules/**",
     "test:watch": "rstest --watch",
     "ci:lint": "biome ci src",
     "ci:compress": "zstd -T0 -vfk -16 --rsyncable dist/*.css dist/*.js dist/*.html && brotli -f -k -Z dist/*.css dist/*.js dist/*.html && gzip -fk -9 dist/*.css dist/*.js dist/*.html",
