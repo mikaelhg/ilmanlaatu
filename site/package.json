@@ -22,7 +22,7 @@
     "update:packageManager": "corepack use pnpm@latest"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.13.0",
+    "@reduxjs/toolkit": "^2.14.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-icons": "^5.7.0",
@@ -34,25 +34,25 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.4",
-    "@rsbuild/core": "^2.3.0",
+    "@rsbuild/core": "^2.3.1",
     "@rsbuild/plugin-react": "^2.1.1",
-    "@rstest/adapter-rsbuild": "^0.12.5",
-    "@rstest/core": "^0.12.5",
-    "@tailwindcss/postcss": "^4.3.3",
+    "@rstest/adapter-rsbuild": "^0.12.6",
+    "@rstest/core": "^0.12.6",
+    "@tailwindcss/postcss": "^4.3.4",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.6.8",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "happy-dom": "^21.0.4",
-    "tailwindcss": "^4.3.3",
+    "tailwindcss": "^4.3.4",
     "typescript": "^7.0.2"
   },
   "packageManager": "pnpm@12.6.0+sha512.3ef68f951cb111ac204b4a5a16f0b2ddf0da56a96e0413e81d855d9f0b55ef926714709028e1cd00c405c2c5fb7b9e8ec4dc46777c805d0373c2f2ff00fd20ec",
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "^24.22.1",
+      "version": "^24.22.2",
       "onFail": "download"
     }
   },
